@@ -1,0 +1,1453 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index &#8212; S2FFT 1.1.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=9be2284e" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom_tabs.css?v=82e1095b" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/jquery.js?v=5d32c60e"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="_static/documentation_options.js?v=58fbf978"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/tabs.js?v=3030b3cb"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
+    <link rel="index" title="Index" href="#" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="1.1.1" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">s2fft is currently in an open beta, please provide feedback on GitHub</div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/sax_logo.png" class="logo__image only-light" alt="S2FFT 1.1.1 documentation - Home"/>
+    <img src="_static/sax_logo.png" class="logo__image only-dark pst-js-only" alt="S2FFT 1.1.1 documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="user_guide/install.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="tutorials/index.html">
+    Notebooks
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api/index.html">
+    API
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://arxiv.org/abs/2311.14670" title="ArXiv" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="_static/arxiv-logomark-small.png" class="icon-link-image" alt="ArXiv"/></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://towardsdatascience.com/differentiable-and-accelerated-spherical-harmonic-transforms-c269393d08f1" title="Medium" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-medium fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Medium</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/s2fft/" title="PyPi" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="_static/pypi.png" class="icon-link-image" alt="PyPi"/></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/astro-informatics/s2fft/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-2x fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://app.codecov.io/gh/astro-informatics/s2fft" title="CodeCov" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="_static/codecov.png" class="icon-link-image" alt="CodeCov"/></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://opensource.org/licenses/MIT" title="Licence" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="_static/MIT_Licence.png" class="icon-link-image" alt="Licence"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="user_guide/install.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="tutorials/index.html">
+    Notebooks
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api/index.html">
+    API
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://arxiv.org/abs/2311.14670" title="ArXiv" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="_static/arxiv-logomark-small.png" class="icon-link-image" alt="ArXiv"/></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://towardsdatascience.com/differentiable-and-accelerated-spherical-harmonic-transforms-c269393d08f1" title="Medium" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-medium fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Medium</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/s2fft/" title="PyPi" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="_static/pypi.png" class="icon-link-image" alt="PyPi"/></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/astro-informatics/s2fft/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-2x fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://app.codecov.io/gh/astro-informatics/s2fft" title="CodeCov" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="_static/codecov.png" class="icon-link-image" alt="CodeCov"/></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://opensource.org/licenses/MIT" title="Licence" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="_static/MIT_Licence.png" class="icon-link-image" alt="Licence"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+
+<h1 id="index">Index</h1>
+
+<div class="genindex-jumpbox">
+ <a href="#C"><strong>C</strong></a>
+ | <a href="#D"><strong>D</strong></a>
+ | <a href="#E"><strong>E</strong></a>
+ | <a href="#F"><strong>F</strong></a>
+ | <a href="#G"><strong>G</strong></a>
+ | <a href="#H"><strong>H</strong></a>
+ | <a href="#I"><strong>I</strong></a>
+ | <a href="#L"><strong>L</strong></a>
+ | <a href="#M"><strong>M</strong></a>
+ | <a href="#N"><strong>N</strong></a>
+ | <a href="#P"><strong>P</strong></a>
+ | <a href="#Q"><strong>Q</strong></a>
+ | <a href="#R"><strong>R</strong></a>
+ | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
+ | <a href="#W"><strong>W</strong></a>
+ 
+</div>
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/utility/signal_generator.html#s2fft.utils.signal_generator.complex_el_and_m_indices">complex_el_and_m_indices() (in module s2fft.utils.signal_generator)</a>
+</li>
+      <li><a href="api/utility/signal_generator.html#s2fft.utils.signal_generator.complex_normal">complex_normal() (in module s2fft.utils.signal_generator)</a>
+</li>
+      <li><a href="api/recursions/price_mcewen.html#s2fft.recursions.price_mcewen.compute_all_slices">compute_all_slices() (in module s2fft.recursions.price_mcewen)</a>
+</li>
+      <li><a href="api/recursions/price_mcewen.html#s2fft.recursions.price_mcewen.compute_all_slices_jax">compute_all_slices_jax() (in module s2fft.recursions.price_mcewen)</a>
+</li>
+      <li><a href="api/recursions/trapani.html#s2fft.recursions.trapani.compute_eighth">compute_eighth() (in module s2fft.recursions.trapani)</a>
+</li>
+      <li><a href="api/recursions/risbo.html#s2fft.recursions.risbo.compute_full">compute_full() (in module s2fft.recursions.risbo)</a>
+
+      <ul>
+        <li><a href="api/recursions/risbo_jax.html#s2fft.recursions.risbo_jax.compute_full">(in module s2fft.recursions.risbo_jax)</a>
+</li>
+        <li><a href="api/recursions/trapani.html#s2fft.recursions.trapani.compute_full">(in module s2fft.recursions.trapani)</a>
+</li>
+        <li><a href="api/recursions/turok.html#s2fft.recursions.turok.compute_full">(in module s2fft.recursions.turok)</a>
+</li>
+      </ul></li>
+      <li><a href="api/recursions/trapani.html#s2fft.recursions.trapani.compute_full_jax">compute_full_jax() (in module s2fft.recursions.trapani)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/recursions/trapani.html#s2fft.recursions.trapani.compute_full_loop">compute_full_loop() (in module s2fft.recursions.trapani)</a>
+</li>
+      <li><a href="api/recursions/risbo.html#s2fft.recursions.risbo.compute_full_vectorised">compute_full_vectorised() (in module s2fft.recursions.risbo)</a>
+</li>
+      <li><a href="api/recursions/trapani.html#s2fft.recursions.trapani.compute_full_vectorized">compute_full_vectorized() (in module s2fft.recursions.trapani)</a>
+</li>
+      <li><a href="api/recursions/trapani.html#s2fft.recursions.trapani.compute_quarter">compute_quarter() (in module s2fft.recursions.trapani)</a>
+
+      <ul>
+        <li><a href="api/recursions/turok.html#s2fft.recursions.turok.compute_quarter">(in module s2fft.recursions.turok)</a>
+</li>
+      </ul></li>
+      <li><a href="api/recursions/trapani.html#s2fft.recursions.trapani.compute_quarter_jax">compute_quarter_jax() (in module s2fft.recursions.trapani)</a>
+</li>
+      <li><a href="api/recursions/turok.html#s2fft.recursions.turok.compute_quarter_slice">compute_quarter_slice() (in module s2fft.recursions.turok)</a>
+</li>
+      <li><a href="api/recursions/trapani.html#s2fft.recursions.trapani.compute_quarter_vectorized">compute_quarter_vectorized() (in module s2fft.recursions.trapani)</a>
+</li>
+      <li><a href="api/recursions/turok.html#s2fft.recursions.turok.compute_slice">compute_slice() (in module s2fft.recursions.turok)</a>
+
+      <ul>
+        <li><a href="api/recursions/turok_jax.html#s2fft.recursions.turok_jax.compute_slice">(in module s2fft.recursions.turok_jax)</a>
+</li>
+      </ul></li>
+      <li><a href="api/utility/logs.html#s2fft.logs.critical_log">critical_log() (in module s2fft.logs)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="D">D</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/utility/logs.html#s2fft.logs.debug_log">debug_log() (in module s2fft.logs)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/utility/resampling.html#s2fft.utils.resampling.downsample_by_two_mwss">downsample_by_two_mwss() (in module s2fft.utils.resampling)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/sampling/spherical_samples.html#s2fft.sampling.s2_samples.elm2ind">elm2ind() (in module s2fft.sampling.s2_samples)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/sampling/wigner_samples.html#s2fft.sampling.so3_samples.elmn2ind">elmn2ind() (in module s2fft.sampling.so3_samples)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="F">F</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/sampling/spherical_samples.html#s2fft.sampling.s2_samples.f_shape">f_shape() (in module s2fft.sampling.s2_samples)</a>
+
+      <ul>
+        <li><a href="api/sampling/wigner_samples.html#s2fft.sampling.so3_samples.f_shape">(in module s2fft.sampling.so3_samples)</a>
+</li>
+      </ul></li>
+      <li><a href="api/recursions/turok.html#s2fft.recursions.turok.fill">fill() (in module s2fft.recursions.turok)</a>
+</li>
+      <li><a href="api/recursions/trapani.html#s2fft.recursions.trapani.fill_eighth2quarter">fill_eighth2quarter() (in module s2fft.recursions.trapani)</a>
+</li>
+      <li><a href="api/recursions/trapani.html#s2fft.recursions.trapani.fill_half2full">fill_half2full() (in module s2fft.recursions.trapani)</a>
+</li>
+      <li><a href="api/recursions/trapani.html#s2fft.recursions.trapani.fill_half2full_jax">fill_half2full_jax() (in module s2fft.recursions.trapani)</a>
+</li>
+      <li><a href="api/recursions/trapani.html#s2fft.recursions.trapani.fill_half2full_vectorized">fill_half2full_vectorized() (in module s2fft.recursions.trapani)</a>
+</li>
+      <li><a href="api/recursions/trapani.html#s2fft.recursions.trapani.fill_quarter2half">fill_quarter2half() (in module s2fft.recursions.trapani)</a>
+</li>
+      <li><a href="api/recursions/trapani.html#s2fft.recursions.trapani.fill_quarter2half_jax">fill_quarter2half_jax() (in module s2fft.recursions.trapani)</a>
+</li>
+      <li><a href="api/recursions/trapani.html#s2fft.recursions.trapani.fill_quarter2half_vectorized">fill_quarter2half_vectorized() (in module s2fft.recursions.trapani)</a>
+</li>
+      <li><a href="api/sampling/spherical_samples.html#s2fft.sampling.s2_samples.flm_1d_to_2d">flm_1d_to_2d() (in module s2fft.sampling.s2_samples)</a>
+</li>
+      <li><a href="api/sampling/spherical_samples.html#s2fft.sampling.s2_samples.flm_2d_to_1d">flm_2d_to_1d() (in module s2fft.sampling.s2_samples)</a>
+</li>
+      <li><a href="api/sampling/spherical_samples.html#s2fft.sampling.s2_samples.flm_2d_to_hp">flm_2d_to_hp() (in module s2fft.sampling.s2_samples)</a>
+</li>
+      <li><a href="api/sampling/spherical_samples.html#s2fft.sampling.s2_samples.flm_hp_to_2d">flm_hp_to_2d() (in module s2fft.sampling.s2_samples)</a>
+</li>
+      <li><a href="api/sampling/spherical_samples.html#s2fft.sampling.s2_samples.flm_shape">flm_shape() (in module s2fft.sampling.s2_samples)</a>
+</li>
+      <li><a href="api/sampling/wigner_samples.html#s2fft.sampling.so3_samples.flmn_1d_to_3d">flmn_1d_to_3d() (in module s2fft.sampling.so3_samples)</a>
+</li>
+      <li><a href="api/sampling/wigner_samples.html#s2fft.sampling.so3_samples.flmn_3d_to_1d">flmn_3d_to_1d() (in module s2fft.sampling.so3_samples)</a>
+</li>
+      <li><a href="api/sampling/wigner_samples.html#s2fft.sampling.so3_samples.flmn_shape">flmn_shape() (in module s2fft.sampling.so3_samples)</a>
+</li>
+      <li><a href="api/sampling/wigner_samples.html#s2fft.sampling.so3_samples.flmn_shape_1d">flmn_shape_1d() (in module s2fft.sampling.so3_samples)</a>
+</li>
+      <li><a href="api/sampling/wigner_samples.html#s2fft.sampling.so3_samples.fnab_shape">fnab_shape() (in module s2fft.sampling.so3_samples)</a>
+</li>
+      <li><a href="api/base_transforms/spin_spherical_transform.html#s2fft.base_transforms.spherical.forward">forward() (in module s2fft.base_transforms.spherical)</a>
+
+      <ul>
+        <li><a href="api/base_transforms/wigner_transform.html#s2fft.base_transforms.wigner.forward">(in module s2fft.base_transforms.wigner)</a>
+</li>
+        <li><a href="api/precompute_transforms/spin_spherical.html#s2fft.precompute_transforms.spherical.forward">(in module s2fft.precompute_transforms.spherical)</a>
+</li>
+        <li><a href="api/precompute_transforms/wigner.html#s2fft.precompute_transforms.wigner.forward">(in module s2fft.precompute_transforms.wigner)</a>
+</li>
+        <li><a href="api/transforms/spin_spherical_transform.html#s2fft.transforms.spherical.forward">(in module s2fft.transforms.spherical)</a>
+</li>
+        <li><a href="api/transforms/wigner.html#s2fft.transforms.wigner.forward">(in module s2fft.transforms.wigner)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/transforms/spin_spherical_transform.html#s2fft.transforms.spherical.forward_jax">forward_jax() (in module s2fft.transforms.spherical)</a>
+
+      <ul>
+        <li><a href="api/transforms/wigner.html#s2fft.transforms.wigner.forward_jax">(in module s2fft.transforms.wigner)</a>
+</li>
+      </ul></li>
+      <li><a href="api/transforms/wigner.html#s2fft.transforms.wigner.forward_jax_ssht">forward_jax_ssht() (in module s2fft.transforms.wigner)</a>
+</li>
+      <li><a href="api/transforms/on_the_fly_recursions.html#s2fft.transforms.otf_recursions.forward_latitudinal_step">forward_latitudinal_step() (in module s2fft.transforms.otf_recursions)</a>
+</li>
+      <li><a href="api/transforms/on_the_fly_recursions.html#s2fft.transforms.otf_recursions.forward_latitudinal_step_jax">forward_latitudinal_step_jax() (in module s2fft.transforms.otf_recursions)</a>
+</li>
+      <li><a href="api/transforms/spin_spherical_transform.html#s2fft.transforms.spherical.forward_numpy">forward_numpy() (in module s2fft.transforms.spherical)</a>
+
+      <ul>
+        <li><a href="api/transforms/wigner.html#s2fft.transforms.wigner.forward_numpy">(in module s2fft.transforms.wigner)</a>
+</li>
+      </ul></li>
+      <li><a href="api/precompute_transforms/fourier_wigner.html#s2fft.precompute_transforms.fourier_wigner.forward_transform">forward_transform() (in module s2fft.precompute_transforms.fourier_wigner)</a>
+
+      <ul>
+        <li><a href="api/precompute_transforms/spin_spherical.html#s2fft.precompute_transforms.spherical.forward_transform">(in module s2fft.precompute_transforms.spherical)</a>
+</li>
+        <li><a href="api/precompute_transforms/wigner.html#s2fft.precompute_transforms.wigner.forward_transform">(in module s2fft.precompute_transforms.wigner)</a>
+</li>
+      </ul></li>
+      <li><a href="api/precompute_transforms/fourier_wigner.html#s2fft.precompute_transforms.fourier_wigner.forward_transform_jax">forward_transform_jax() (in module s2fft.precompute_transforms.fourier_wigner)</a>
+
+      <ul>
+        <li><a href="api/precompute_transforms/spin_spherical.html#s2fft.precompute_transforms.spherical.forward_transform_jax">(in module s2fft.precompute_transforms.spherical)</a>
+</li>
+        <li><a href="api/precompute_transforms/wigner.html#s2fft.precompute_transforms.wigner.forward_transform_jax">(in module s2fft.precompute_transforms.wigner)</a>
+</li>
+      </ul></li>
+      <li><a href="api/precompute_transforms/spin_spherical.html#s2fft.precompute_transforms.spherical.forward_transform_torch">forward_transform_torch() (in module s2fft.precompute_transforms.spherical)</a>
+
+      <ul>
+        <li><a href="api/precompute_transforms/wigner.html#s2fft.precompute_transforms.wigner.forward_transform_torch">(in module s2fft.precompute_transforms.wigner)</a>
+</li>
+      </ul></li>
+      <li><a href="api/precompute_transforms/construct.html#s2fft.precompute_transforms.construct.fourier_wigner_kernel">fourier_wigner_kernel() (in module s2fft.precompute_transforms.construct)</a>
+</li>
+      <li><a href="api/precompute_transforms/construct.html#s2fft.precompute_transforms.construct.fourier_wigner_kernel_jax">fourier_wigner_kernel_jax() (in module s2fft.precompute_transforms.construct)</a>
+</li>
+      <li><a href="api/sampling/spherical_samples.html#s2fft.sampling.s2_samples.ftm_shape">ftm_shape() (in module s2fft.sampling.s2_samples)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/utility/signal_generator.html#s2fft.utils.signal_generator.generate_flm">generate_flm() (in module s2fft.utils.signal_generator)</a>
+</li>
+      <li><a href="api/utility/signal_generator.html#s2fft.utils.signal_generator.generate_flmn">generate_flmn() (in module s2fft.utils.signal_generator)</a>
+</li>
+      <li><a href="api/recursions/price_mcewen.html#s2fft.recursions.price_mcewen.generate_precomputes">generate_precomputes() (in module s2fft.recursions.price_mcewen)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/recursions/price_mcewen.html#s2fft.recursions.price_mcewen.generate_precomputes_jax">generate_precomputes_jax() (in module s2fft.recursions.price_mcewen)</a>
+</li>
+      <li><a href="api/recursions/price_mcewen.html#s2fft.recursions.price_mcewen.generate_precomputes_wigner">generate_precomputes_wigner() (in module s2fft.recursions.price_mcewen)</a>
+</li>
+      <li><a href="api/recursions/price_mcewen.html#s2fft.recursions.price_mcewen.generate_precomputes_wigner_jax">generate_precomputes_wigner_jax() (in module s2fft.recursions.price_mcewen)</a>
+</li>
+      <li><a href="api/utility/rotation.html#s2fft.utils.rotation.generate_rotate_dls">generate_rotate_dls() (in module s2fft.utils.rotation)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/utility/healpix_ffts.html#s2fft.utils.healpix_ffts.healpix_fft">healpix_fft() (in module s2fft.utils.healpix_ffts)</a>
+</li>
+      <li><a href="api/utility/healpix_ffts.html#s2fft.utils.healpix_ffts.healpix_fft_cuda">healpix_fft_cuda() (in module s2fft.utils.healpix_ffts)</a>
+</li>
+      <li><a href="api/utility/healpix_ffts.html#s2fft.utils.healpix_ffts.healpix_fft_jax">healpix_fft_jax() (in module s2fft.utils.healpix_ffts)</a>
+</li>
+      <li><a href="api/utility/healpix_ffts.html#s2fft.utils.healpix_ffts.healpix_fft_numpy">healpix_fft_numpy() (in module s2fft.utils.healpix_ffts)</a>
+</li>
+      <li><a href="api/utility/healpix_ffts.html#s2fft.utils.healpix_ffts.healpix_fft_torch">healpix_fft_torch() (in module s2fft.utils.healpix_ffts)</a>
+</li>
+      <li><a href="api/utility/healpix_ffts.html#s2fft.utils.healpix_ffts.healpix_ifft">healpix_ifft() (in module s2fft.utils.healpix_ffts)</a>
+</li>
+      <li><a href="api/utility/healpix_ffts.html#s2fft.utils.healpix_ffts.healpix_ifft_cuda">healpix_ifft_cuda() (in module s2fft.utils.healpix_ffts)</a>
+</li>
+      <li><a href="api/utility/healpix_ffts.html#s2fft.utils.healpix_ffts.healpix_ifft_jax">healpix_ifft_jax() (in module s2fft.utils.healpix_ffts)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/utility/healpix_ffts.html#s2fft.utils.healpix_ffts.healpix_ifft_numpy">healpix_ifft_numpy() (in module s2fft.utils.healpix_ffts)</a>
+</li>
+      <li><a href="api/utility/healpix_ffts.html#s2fft.utils.healpix_ffts.healpix_ifft_torch">healpix_ifft_torch() (in module s2fft.utils.healpix_ffts)</a>
+</li>
+      <li><a href="api/precompute_transforms/construct.html#s2fft.precompute_transforms.construct.healpix_phase_shifts">healpix_phase_shifts() (in module s2fft.precompute_transforms.construct)</a>
+</li>
+      <li><a href="api/transforms/c_backend_spherical.html#s2fft.transforms.c_backend_spherical.healpy_alm2map">healpy_alm2map() (in module s2fft.transforms.c_backend_spherical)</a>
+</li>
+      <li><a href="api/transforms/c_backend_spherical.html#s2fft.transforms.c_backend_spherical.healpy_forward">healpy_forward() (in module s2fft.transforms.c_backend_spherical)</a>
+</li>
+      <li><a href="api/transforms/c_backend_spherical.html#s2fft.transforms.c_backend_spherical.healpy_inverse">healpy_inverse() (in module s2fft.transforms.c_backend_spherical)</a>
+</li>
+      <li><a href="api/transforms/c_backend_spherical.html#s2fft.transforms.c_backend_spherical.healpy_map2alm">healpy_map2alm() (in module s2fft.transforms.c_backend_spherical)</a>
+</li>
+      <li><a href="api/sampling/spherical_samples.html#s2fft.sampling.s2_samples.hp_ang2pix">hp_ang2pix() (in module s2fft.sampling.s2_samples)</a>
+</li>
+      <li><a href="api/sampling/spherical_samples.html#s2fft.sampling.s2_samples.hp_getidx">hp_getidx() (in module s2fft.sampling.s2_samples)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/sampling/spherical_samples.html#s2fft.sampling.s2_samples.ind2elm">ind2elm() (in module s2fft.sampling.s2_samples)</a>
+</li>
+      <li><a href="api/utility/logs.html#s2fft.logs.info_log">info_log() (in module s2fft.logs)</a>
+</li>
+      <li><a href="api/recursions/trapani.html#s2fft.recursions.trapani.init">init() (in module s2fft.recursions.trapani)</a>
+</li>
+      <li><a href="api/recursions/trapani.html#s2fft.recursions.trapani.init_jax">init_jax() (in module s2fft.recursions.trapani)</a>
+</li>
+      <li><a href="api/recursions/trapani.html#s2fft.recursions.trapani.init_nonjax">init_nonjax() (in module s2fft.recursions.trapani)</a>
+</li>
+      <li><a href="api/base_transforms/spin_spherical_transform.html#s2fft.base_transforms.spherical.inverse">inverse() (in module s2fft.base_transforms.spherical)</a>
+
+      <ul>
+        <li><a href="api/base_transforms/wigner_transform.html#s2fft.base_transforms.wigner.inverse">(in module s2fft.base_transforms.wigner)</a>
+</li>
+        <li><a href="api/precompute_transforms/spin_spherical.html#s2fft.precompute_transforms.spherical.inverse">(in module s2fft.precompute_transforms.spherical)</a>
+</li>
+        <li><a href="api/precompute_transforms/wigner.html#s2fft.precompute_transforms.wigner.inverse">(in module s2fft.precompute_transforms.wigner)</a>
+</li>
+        <li><a href="api/transforms/spin_spherical_transform.html#s2fft.transforms.spherical.inverse">(in module s2fft.transforms.spherical)</a>
+</li>
+        <li><a href="api/transforms/wigner.html#s2fft.transforms.wigner.inverse">(in module s2fft.transforms.wigner)</a>
+</li>
+      </ul></li>
+      <li><a href="api/transforms/spin_spherical_transform.html#s2fft.transforms.spherical.inverse_jax">inverse_jax() (in module s2fft.transforms.spherical)</a>
+
+      <ul>
+        <li><a href="api/transforms/wigner.html#s2fft.transforms.wigner.inverse_jax">(in module s2fft.transforms.wigner)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/transforms/wigner.html#s2fft.transforms.wigner.inverse_jax_ssht">inverse_jax_ssht() (in module s2fft.transforms.wigner)</a>
+</li>
+      <li><a href="api/transforms/on_the_fly_recursions.html#s2fft.transforms.otf_recursions.inverse_latitudinal_step">inverse_latitudinal_step() (in module s2fft.transforms.otf_recursions)</a>
+</li>
+      <li><a href="api/transforms/on_the_fly_recursions.html#s2fft.transforms.otf_recursions.inverse_latitudinal_step_jax">inverse_latitudinal_step_jax() (in module s2fft.transforms.otf_recursions)</a>
+</li>
+      <li><a href="api/transforms/spin_spherical_transform.html#s2fft.transforms.spherical.inverse_numpy">inverse_numpy() (in module s2fft.transforms.spherical)</a>
+
+      <ul>
+        <li><a href="api/transforms/wigner.html#s2fft.transforms.wigner.inverse_numpy">(in module s2fft.transforms.wigner)</a>
+</li>
+      </ul></li>
+      <li><a href="api/precompute_transforms/fourier_wigner.html#s2fft.precompute_transforms.fourier_wigner.inverse_transform">inverse_transform() (in module s2fft.precompute_transforms.fourier_wigner)</a>
+
+      <ul>
+        <li><a href="api/precompute_transforms/spin_spherical.html#s2fft.precompute_transforms.spherical.inverse_transform">(in module s2fft.precompute_transforms.spherical)</a>
+</li>
+        <li><a href="api/precompute_transforms/wigner.html#s2fft.precompute_transforms.wigner.inverse_transform">(in module s2fft.precompute_transforms.wigner)</a>
+</li>
+      </ul></li>
+      <li><a href="api/precompute_transforms/fourier_wigner.html#s2fft.precompute_transforms.fourier_wigner.inverse_transform_jax">inverse_transform_jax() (in module s2fft.precompute_transforms.fourier_wigner)</a>
+
+      <ul>
+        <li><a href="api/precompute_transforms/spin_spherical.html#s2fft.precompute_transforms.spherical.inverse_transform_jax">(in module s2fft.precompute_transforms.spherical)</a>
+</li>
+        <li><a href="api/precompute_transforms/wigner.html#s2fft.precompute_transforms.wigner.inverse_transform_jax">(in module s2fft.precompute_transforms.wigner)</a>
+</li>
+      </ul></li>
+      <li><a href="api/precompute_transforms/spin_spherical.html#s2fft.precompute_transforms.spherical.inverse_transform_torch">inverse_transform_torch() (in module s2fft.precompute_transforms.spherical)</a>
+
+      <ul>
+        <li><a href="api/precompute_transforms/wigner.html#s2fft.precompute_transforms.wigner.inverse_transform_torch">(in module s2fft.precompute_transforms.wigner)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="L">L</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/sampling/spherical_samples.html#s2fft.sampling.s2_samples.lm2lm_hp">lm2lm_hp() (in module s2fft.sampling.s2_samples)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="M">M</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    module
+
+      <ul>
+        <li><a href="api/base_transforms/spin_spherical_transform.html#module-s2fft.base_transforms.spherical">s2fft.base_transforms.spherical</a>
+</li>
+        <li><a href="api/base_transforms/wigner_transform.html#module-s2fft.base_transforms.wigner">s2fft.base_transforms.wigner</a>
+</li>
+        <li><a href="api/utility/logs.html#module-s2fft.logs">s2fft.logs</a>
+</li>
+        <li><a href="api/precompute_transforms/construct.html#module-s2fft.precompute_transforms.construct">s2fft.precompute_transforms.construct</a>
+</li>
+        <li><a href="api/precompute_transforms/custom_ops.html#module-s2fft.precompute_transforms.custom_ops">s2fft.precompute_transforms.custom_ops</a>
+</li>
+        <li><a href="api/precompute_transforms/fourier_wigner.html#module-s2fft.precompute_transforms.fourier_wigner">s2fft.precompute_transforms.fourier_wigner</a>
+</li>
+        <li><a href="api/precompute_transforms/spin_spherical.html#module-s2fft.precompute_transforms.spherical">s2fft.precompute_transforms.spherical</a>
+</li>
+        <li><a href="api/precompute_transforms/wigner.html#module-s2fft.precompute_transforms.wigner">s2fft.precompute_transforms.wigner</a>
+</li>
+        <li><a href="api/recursions/price_mcewen.html#module-s2fft.recursions.price_mcewen">s2fft.recursions.price_mcewen</a>
+</li>
+        <li><a href="api/recursions/risbo.html#module-s2fft.recursions.risbo">s2fft.recursions.risbo</a>
+</li>
+        <li><a href="api/recursions/risbo_jax.html#module-s2fft.recursions.risbo_jax">s2fft.recursions.risbo_jax</a>
+</li>
+        <li><a href="api/recursions/trapani.html#module-s2fft.recursions.trapani">s2fft.recursions.trapani</a>
+</li>
+        <li><a href="api/recursions/turok.html#module-s2fft.recursions.turok">s2fft.recursions.turok</a>
+</li>
+        <li><a href="api/recursions/turok_jax.html#module-s2fft.recursions.turok_jax">s2fft.recursions.turok_jax</a>
+</li>
+        <li><a href="api/sampling/spherical_samples.html#module-s2fft.sampling.s2_samples">s2fft.sampling.s2_samples</a>
+</li>
+        <li><a href="api/sampling/wigner_samples.html#module-s2fft.sampling.so3_samples">s2fft.sampling.so3_samples</a>
+</li>
+        <li><a href="api/transforms/c_backend_spherical.html#module-s2fft.transforms.c_backend_spherical">s2fft.transforms.c_backend_spherical</a>
+</li>
+        <li><a href="api/transforms/on_the_fly_recursions.html#module-s2fft.transforms.otf_recursions">s2fft.transforms.otf_recursions</a>
+</li>
+        <li><a href="api/transforms/spin_spherical_transform.html#module-s2fft.transforms.spherical">s2fft.transforms.spherical</a>
+</li>
+        <li><a href="api/transforms/wigner.html#module-s2fft.transforms.wigner">s2fft.transforms.wigner</a>
+</li>
+        <li><a href="api/utility/utils.html#module-s2fft.utils">s2fft.utils</a>
+</li>
+        <li><a href="api/utility/healpix_ffts.html#module-s2fft.utils.healpix_ffts">s2fft.utils.healpix_ffts</a>
+</li>
+        <li><a href="api/utility/quadrature.html#module-s2fft.utils.quadrature">s2fft.utils.quadrature</a>
+</li>
+        <li><a href="api/utility/quadrature_jax.html#module-s2fft.utils.quadrature_jax">s2fft.utils.quadrature_jax</a>
+</li>
+        <li><a href="api/utility/quadrature_torch.html#module-s2fft.utils.quadrature_torch">s2fft.utils.quadrature_torch</a>
+</li>
+        <li><a href="api/utility/resampling.html#module-s2fft.utils.resampling">s2fft.utils.resampling</a>
+</li>
+        <li><a href="api/utility/resampling_jax.html#module-s2fft.utils.resampling_jax">s2fft.utils.resampling_jax</a>
+</li>
+        <li><a href="api/utility/resampling_torch.html#module-s2fft.utils.resampling_torch">s2fft.utils.resampling_torch</a>
+</li>
+        <li><a href="api/utility/rotation.html#module-s2fft.utils.rotation">s2fft.utils.rotation</a>
+</li>
+        <li><a href="api/utility/signal_generator.html#module-s2fft.utils.signal_generator">s2fft.utils.signal_generator</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/utility/resampling.html#s2fft.utils.resampling.mw_to_mwss">mw_to_mwss() (in module s2fft.utils.resampling)</a>
+
+      <ul>
+        <li><a href="api/utility/resampling_jax.html#s2fft.utils.resampling_jax.mw_to_mwss">(in module s2fft.utils.resampling_jax)</a>
+</li>
+        <li><a href="api/utility/resampling_torch.html#s2fft.utils.resampling_torch.mw_to_mwss">(in module s2fft.utils.resampling_torch)</a>
+</li>
+      </ul></li>
+      <li><a href="api/utility/resampling.html#s2fft.utils.resampling.mw_to_mwss_phi">mw_to_mwss_phi() (in module s2fft.utils.resampling)</a>
+
+      <ul>
+        <li><a href="api/utility/resampling_jax.html#s2fft.utils.resampling_jax.mw_to_mwss_phi">(in module s2fft.utils.resampling_jax)</a>
+</li>
+        <li><a href="api/utility/resampling_torch.html#s2fft.utils.resampling_torch.mw_to_mwss_phi">(in module s2fft.utils.resampling_torch)</a>
+</li>
+      </ul></li>
+      <li><a href="api/utility/resampling.html#s2fft.utils.resampling.mw_to_mwss_theta">mw_to_mwss_theta() (in module s2fft.utils.resampling)</a>
+
+      <ul>
+        <li><a href="api/utility/resampling_jax.html#s2fft.utils.resampling_jax.mw_to_mwss_theta">(in module s2fft.utils.resampling_jax)</a>
+</li>
+        <li><a href="api/utility/resampling_torch.html#s2fft.utils.resampling_torch.mw_to_mwss_theta">(in module s2fft.utils.resampling_torch)</a>
+</li>
+      </ul></li>
+      <li><a href="api/utility/quadrature.html#s2fft.utils.quadrature.mw_weights">mw_weights() (in module s2fft.utils.quadrature)</a>
+
+      <ul>
+        <li><a href="api/utility/quadrature_jax.html#s2fft.utils.quadrature_jax.mw_weights">(in module s2fft.utils.quadrature_jax)</a>
+</li>
+        <li><a href="api/utility/quadrature_torch.html#s2fft.utils.quadrature_torch.mw_weights">(in module s2fft.utils.quadrature_torch)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="N">N</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/sampling/spherical_samples.html#s2fft.sampling.s2_samples.ncoeff">ncoeff() (in module s2fft.sampling.s2_samples)</a>
+</li>
+      <li><a href="api/sampling/spherical_samples.html#s2fft.sampling.s2_samples.nphi_equiang">nphi_equiang() (in module s2fft.sampling.s2_samples)</a>
+</li>
+      <li><a href="api/sampling/spherical_samples.html#s2fft.sampling.s2_samples.nphi_equitorial_band">nphi_equitorial_band() (in module s2fft.sampling.s2_samples)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/sampling/spherical_samples.html#s2fft.sampling.s2_samples.nphi_ring">nphi_ring() (in module s2fft.sampling.s2_samples)</a>
+</li>
+      <li><a href="api/sampling/spherical_samples.html#s2fft.sampling.s2_samples.ntheta">ntheta() (in module s2fft.sampling.s2_samples)</a>
+</li>
+      <li><a href="api/sampling/spherical_samples.html#s2fft.sampling.s2_samples.ntheta_extension">ntheta_extension() (in module s2fft.sampling.s2_samples)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/sampling/spherical_samples.html#s2fft.sampling.s2_samples.p2phi_equiang">p2phi_equiang() (in module s2fft.sampling.s2_samples)</a>
+</li>
+      <li><a href="api/sampling/spherical_samples.html#s2fft.sampling.s2_samples.p2phi_ring">p2phi_ring() (in module s2fft.sampling.s2_samples)</a>
+</li>
+      <li><a href="api/utility/healpix_ffts.html#s2fft.utils.healpix_ffts.p2phi_rings">p2phi_rings() (in module s2fft.utils.healpix_ffts)</a>
+</li>
+      <li><a href="api/utility/healpix_ffts.html#s2fft.utils.healpix_ffts.p2phi_rings_jax">p2phi_rings_jax() (in module s2fft.utils.healpix_ffts)</a>
+</li>
+      <li><a href="api/utility/resampling.html#s2fft.utils.resampling.periodic_extension">periodic_extension() (in module s2fft.utils.resampling)</a>
+
+      <ul>
+        <li><a href="api/utility/resampling_jax.html#s2fft.utils.resampling_jax.periodic_extension">(in module s2fft.utils.resampling_jax)</a>
+</li>
+        <li><a href="api/utility/resampling_torch.html#s2fft.utils.resampling_torch.periodic_extension">(in module s2fft.utils.resampling_torch)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/utility/resampling.html#s2fft.utils.resampling.periodic_extension_spatial_mwss">periodic_extension_spatial_mwss() (in module s2fft.utils.resampling)</a>
+
+      <ul>
+        <li><a href="api/utility/resampling_jax.html#s2fft.utils.resampling_jax.periodic_extension_spatial_mwss">(in module s2fft.utils.resampling_jax)</a>
+</li>
+        <li><a href="api/utility/resampling_torch.html#s2fft.utils.resampling_torch.periodic_extension_spatial_mwss">(in module s2fft.utils.resampling_torch)</a>
+</li>
+      </ul></li>
+      <li><a href="api/sampling/spherical_samples.html#s2fft.sampling.s2_samples.phis_equiang">phis_equiang() (in module s2fft.sampling.s2_samples)</a>
+</li>
+      <li><a href="api/sampling/spherical_samples.html#s2fft.sampling.s2_samples.phis_ring">phis_ring() (in module s2fft.sampling.s2_samples)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="Q">Q</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/utility/quadrature.html#s2fft.utils.quadrature.quad_weight_dh_theta_only">quad_weight_dh_theta_only() (in module s2fft.utils.quadrature)</a>
+
+      <ul>
+        <li><a href="api/utility/quadrature_jax.html#s2fft.utils.quadrature_jax.quad_weight_dh_theta_only">(in module s2fft.utils.quadrature_jax)</a>
+</li>
+        <li><a href="api/utility/quadrature_torch.html#s2fft.utils.quadrature_torch.quad_weight_dh_theta_only">(in module s2fft.utils.quadrature_torch)</a>
+</li>
+      </ul></li>
+      <li><a href="api/utility/quadrature.html#s2fft.utils.quadrature.quad_weights">quad_weights() (in module s2fft.utils.quadrature)</a>
+
+      <ul>
+        <li><a href="api/utility/quadrature_jax.html#s2fft.utils.quadrature_jax.quad_weights">(in module s2fft.utils.quadrature_jax)</a>
+</li>
+        <li><a href="api/utility/quadrature_torch.html#s2fft.utils.quadrature_torch.quad_weights">(in module s2fft.utils.quadrature_torch)</a>
+</li>
+      </ul></li>
+      <li><a href="api/utility/quadrature.html#s2fft.utils.quadrature.quad_weights_dh">quad_weights_dh() (in module s2fft.utils.quadrature)</a>
+
+      <ul>
+        <li><a href="api/utility/quadrature_jax.html#s2fft.utils.quadrature_jax.quad_weights_dh">(in module s2fft.utils.quadrature_jax)</a>
+</li>
+        <li><a href="api/utility/quadrature_torch.html#s2fft.utils.quadrature_torch.quad_weights_dh">(in module s2fft.utils.quadrature_torch)</a>
+</li>
+      </ul></li>
+      <li><a href="api/utility/quadrature.html#s2fft.utils.quadrature.quad_weights_gl">quad_weights_gl() (in module s2fft.utils.quadrature)</a>
+
+      <ul>
+        <li><a href="api/utility/quadrature_jax.html#s2fft.utils.quadrature_jax.quad_weights_gl">(in module s2fft.utils.quadrature_jax)</a>
+</li>
+        <li><a href="api/utility/quadrature_torch.html#s2fft.utils.quadrature_torch.quad_weights_gl">(in module s2fft.utils.quadrature_torch)</a>
+</li>
+      </ul></li>
+      <li><a href="api/utility/quadrature.html#s2fft.utils.quadrature.quad_weights_hp">quad_weights_hp() (in module s2fft.utils.quadrature)</a>
+
+      <ul>
+        <li><a href="api/utility/quadrature_jax.html#s2fft.utils.quadrature_jax.quad_weights_hp">(in module s2fft.utils.quadrature_jax)</a>
+</li>
+        <li><a href="api/utility/quadrature_torch.html#s2fft.utils.quadrature_torch.quad_weights_hp">(in module s2fft.utils.quadrature_torch)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/utility/quadrature.html#s2fft.utils.quadrature.quad_weights_mw">quad_weights_mw() (in module s2fft.utils.quadrature)</a>
+
+      <ul>
+        <li><a href="api/utility/quadrature_jax.html#s2fft.utils.quadrature_jax.quad_weights_mw">(in module s2fft.utils.quadrature_jax)</a>
+</li>
+        <li><a href="api/utility/quadrature_torch.html#s2fft.utils.quadrature_torch.quad_weights_mw">(in module s2fft.utils.quadrature_torch)</a>
+</li>
+      </ul></li>
+      <li><a href="api/utility/quadrature.html#s2fft.utils.quadrature.quad_weights_mw_theta_only">quad_weights_mw_theta_only() (in module s2fft.utils.quadrature)</a>
+
+      <ul>
+        <li><a href="api/utility/quadrature_jax.html#s2fft.utils.quadrature_jax.quad_weights_mw_theta_only">(in module s2fft.utils.quadrature_jax)</a>
+</li>
+        <li><a href="api/utility/quadrature_torch.html#s2fft.utils.quadrature_torch.quad_weights_mw_theta_only">(in module s2fft.utils.quadrature_torch)</a>
+</li>
+      </ul></li>
+      <li><a href="api/utility/quadrature.html#s2fft.utils.quadrature.quad_weights_mwss">quad_weights_mwss() (in module s2fft.utils.quadrature)</a>
+
+      <ul>
+        <li><a href="api/utility/quadrature_jax.html#s2fft.utils.quadrature_jax.quad_weights_mwss">(in module s2fft.utils.quadrature_jax)</a>
+</li>
+        <li><a href="api/utility/quadrature_torch.html#s2fft.utils.quadrature_torch.quad_weights_mwss">(in module s2fft.utils.quadrature_torch)</a>
+</li>
+      </ul></li>
+      <li><a href="api/utility/quadrature.html#s2fft.utils.quadrature.quad_weights_mwss_theta_only">quad_weights_mwss_theta_only() (in module s2fft.utils.quadrature)</a>
+
+      <ul>
+        <li><a href="api/utility/quadrature_jax.html#s2fft.utils.quadrature_jax.quad_weights_mwss_theta_only">(in module s2fft.utils.quadrature_jax)</a>
+</li>
+        <li><a href="api/utility/quadrature_torch.html#s2fft.utils.quadrature_torch.quad_weights_mwss_theta_only">(in module s2fft.utils.quadrature_torch)</a>
+</li>
+      </ul></li>
+      <li><a href="api/utility/quadrature.html#s2fft.utils.quadrature.quad_weights_transform">quad_weights_transform() (in module s2fft.utils.quadrature)</a>
+
+      <ul>
+        <li><a href="api/utility/quadrature_jax.html#s2fft.utils.quadrature_jax.quad_weights_transform">(in module s2fft.utils.quadrature_jax)</a>
+</li>
+        <li><a href="api/utility/quadrature_torch.html#s2fft.utils.quadrature_torch.quad_weights_transform">(in module s2fft.utils.quadrature_torch)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/recursions/turok_jax.html#s2fft.recursions.turok_jax.reindex">reindex() (in module s2fft.recursions.turok_jax)</a>
+</li>
+      <li><a href="api/sampling/spherical_samples.html#s2fft.sampling.s2_samples.ring_phase_shift_hp">ring_phase_shift_hp() (in module s2fft.sampling.s2_samples)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/utility/healpix_ffts.html#s2fft.utils.healpix_ffts.ring_phase_shifts_hp">ring_phase_shifts_hp() (in module s2fft.utils.healpix_ffts)</a>
+</li>
+      <li><a href="api/utility/healpix_ffts.html#s2fft.utils.healpix_ffts.ring_phase_shifts_hp_jax">ring_phase_shifts_hp_jax() (in module s2fft.utils.healpix_ffts)</a>
+</li>
+      <li><a href="api/utility/rotation.html#s2fft.utils.rotation.rotate_flms">rotate_flms() (in module s2fft.utils.rotation)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/precompute_transforms/custom_ops.html#s2fft.precompute_transforms.custom_ops.s2_to_wigner_subset">s2_to_wigner_subset() (in module s2fft.precompute_transforms.custom_ops)</a>
+</li>
+      <li><a href="api/precompute_transforms/custom_ops.html#s2fft.precompute_transforms.custom_ops.s2_to_wigner_subset_jax">s2_to_wigner_subset_jax() (in module s2fft.precompute_transforms.custom_ops)</a>
+</li>
+      <li>
+    s2fft.base_transforms.spherical
+
+      <ul>
+        <li><a href="api/base_transforms/spin_spherical_transform.html#module-s2fft.base_transforms.spherical">module</a>
+</li>
+      </ul></li>
+      <li>
+    s2fft.base_transforms.wigner
+
+      <ul>
+        <li><a href="api/base_transforms/wigner_transform.html#module-s2fft.base_transforms.wigner">module</a>
+</li>
+      </ul></li>
+      <li>
+    s2fft.logs
+
+      <ul>
+        <li><a href="api/utility/logs.html#module-s2fft.logs">module</a>
+</li>
+      </ul></li>
+      <li>
+    s2fft.precompute_transforms.construct
+
+      <ul>
+        <li><a href="api/precompute_transforms/construct.html#module-s2fft.precompute_transforms.construct">module</a>
+</li>
+      </ul></li>
+      <li>
+    s2fft.precompute_transforms.custom_ops
+
+      <ul>
+        <li><a href="api/precompute_transforms/custom_ops.html#module-s2fft.precompute_transforms.custom_ops">module</a>
+</li>
+      </ul></li>
+      <li>
+    s2fft.precompute_transforms.fourier_wigner
+
+      <ul>
+        <li><a href="api/precompute_transforms/fourier_wigner.html#module-s2fft.precompute_transforms.fourier_wigner">module</a>
+</li>
+      </ul></li>
+      <li>
+    s2fft.precompute_transforms.spherical
+
+      <ul>
+        <li><a href="api/precompute_transforms/spin_spherical.html#module-s2fft.precompute_transforms.spherical">module</a>
+</li>
+      </ul></li>
+      <li>
+    s2fft.precompute_transforms.wigner
+
+      <ul>
+        <li><a href="api/precompute_transforms/wigner.html#module-s2fft.precompute_transforms.wigner">module</a>
+</li>
+      </ul></li>
+      <li>
+    s2fft.recursions.price_mcewen
+
+      <ul>
+        <li><a href="api/recursions/price_mcewen.html#module-s2fft.recursions.price_mcewen">module</a>
+</li>
+      </ul></li>
+      <li>
+    s2fft.recursions.risbo
+
+      <ul>
+        <li><a href="api/recursions/risbo.html#module-s2fft.recursions.risbo">module</a>
+</li>
+      </ul></li>
+      <li>
+    s2fft.recursions.risbo_jax
+
+      <ul>
+        <li><a href="api/recursions/risbo_jax.html#module-s2fft.recursions.risbo_jax">module</a>
+</li>
+      </ul></li>
+      <li>
+    s2fft.recursions.trapani
+
+      <ul>
+        <li><a href="api/recursions/trapani.html#module-s2fft.recursions.trapani">module</a>
+</li>
+      </ul></li>
+      <li>
+    s2fft.recursions.turok
+
+      <ul>
+        <li><a href="api/recursions/turok.html#module-s2fft.recursions.turok">module</a>
+</li>
+      </ul></li>
+      <li>
+    s2fft.recursions.turok_jax
+
+      <ul>
+        <li><a href="api/recursions/turok_jax.html#module-s2fft.recursions.turok_jax">module</a>
+</li>
+      </ul></li>
+      <li>
+    s2fft.sampling.s2_samples
+
+      <ul>
+        <li><a href="api/sampling/spherical_samples.html#module-s2fft.sampling.s2_samples">module</a>
+</li>
+      </ul></li>
+      <li>
+    s2fft.sampling.so3_samples
+
+      <ul>
+        <li><a href="api/sampling/wigner_samples.html#module-s2fft.sampling.so3_samples">module</a>
+</li>
+      </ul></li>
+      <li>
+    s2fft.transforms.c_backend_spherical
+
+      <ul>
+        <li><a href="api/transforms/c_backend_spherical.html#module-s2fft.transforms.c_backend_spherical">module</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    s2fft.transforms.otf_recursions
+
+      <ul>
+        <li><a href="api/transforms/on_the_fly_recursions.html#module-s2fft.transforms.otf_recursions">module</a>
+</li>
+      </ul></li>
+      <li>
+    s2fft.transforms.spherical
+
+      <ul>
+        <li><a href="api/transforms/spin_spherical_transform.html#module-s2fft.transforms.spherical">module</a>
+</li>
+      </ul></li>
+      <li>
+    s2fft.transforms.wigner
+
+      <ul>
+        <li><a href="api/transforms/wigner.html#module-s2fft.transforms.wigner">module</a>
+</li>
+      </ul></li>
+      <li>
+    s2fft.utils
+
+      <ul>
+        <li><a href="api/utility/utils.html#module-s2fft.utils">module</a>
+</li>
+      </ul></li>
+      <li>
+    s2fft.utils.healpix_ffts
+
+      <ul>
+        <li><a href="api/utility/healpix_ffts.html#module-s2fft.utils.healpix_ffts">module</a>
+</li>
+      </ul></li>
+      <li>
+    s2fft.utils.quadrature
+
+      <ul>
+        <li><a href="api/utility/quadrature.html#module-s2fft.utils.quadrature">module</a>
+</li>
+      </ul></li>
+      <li>
+    s2fft.utils.quadrature_jax
+
+      <ul>
+        <li><a href="api/utility/quadrature_jax.html#module-s2fft.utils.quadrature_jax">module</a>
+</li>
+      </ul></li>
+      <li>
+    s2fft.utils.quadrature_torch
+
+      <ul>
+        <li><a href="api/utility/quadrature_torch.html#module-s2fft.utils.quadrature_torch">module</a>
+</li>
+      </ul></li>
+      <li>
+    s2fft.utils.resampling
+
+      <ul>
+        <li><a href="api/utility/resampling.html#module-s2fft.utils.resampling">module</a>
+</li>
+      </ul></li>
+      <li>
+    s2fft.utils.resampling_jax
+
+      <ul>
+        <li><a href="api/utility/resampling_jax.html#module-s2fft.utils.resampling_jax">module</a>
+</li>
+      </ul></li>
+      <li>
+    s2fft.utils.resampling_torch
+
+      <ul>
+        <li><a href="api/utility/resampling_torch.html#module-s2fft.utils.resampling_torch">module</a>
+</li>
+      </ul></li>
+      <li>
+    s2fft.utils.rotation
+
+      <ul>
+        <li><a href="api/utility/rotation.html#module-s2fft.utils.rotation">module</a>
+</li>
+      </ul></li>
+      <li>
+    s2fft.utils.signal_generator
+
+      <ul>
+        <li><a href="api/utility/signal_generator.html#module-s2fft.utils.signal_generator">module</a>
+</li>
+      </ul></li>
+      <li><a href="api/utility/logs.html#s2fft.logs.setup_logging">setup_logging() (in module s2fft.logs)</a>
+</li>
+      <li><a href="api/precompute_transforms/custom_ops.html#s2fft.precompute_transforms.custom_ops.so3_to_wigner_subset">so3_to_wigner_subset() (in module s2fft.precompute_transforms.custom_ops)</a>
+</li>
+      <li><a href="api/precompute_transforms/custom_ops.html#s2fft.precompute_transforms.custom_ops.so3_to_wigner_subset_jax">so3_to_wigner_subset_jax() (in module s2fft.precompute_transforms.custom_ops)</a>
+</li>
+      <li><a href="api/utility/healpix_ffts.html#s2fft.utils.healpix_ffts.spectral_folding">spectral_folding() (in module s2fft.utils.healpix_ffts)</a>
+</li>
+      <li><a href="api/utility/healpix_ffts.html#s2fft.utils.healpix_ffts.spectral_folding_jax">spectral_folding_jax() (in module s2fft.utils.healpix_ffts)</a>
+</li>
+      <li><a href="api/utility/healpix_ffts.html#s2fft.utils.healpix_ffts.spectral_folding_torch">spectral_folding_torch() (in module s2fft.utils.healpix_ffts)</a>
+</li>
+      <li><a href="api/utility/healpix_ffts.html#s2fft.utils.healpix_ffts.spectral_periodic_extension">spectral_periodic_extension() (in module s2fft.utils.healpix_ffts)</a>
+</li>
+      <li><a href="api/utility/healpix_ffts.html#s2fft.utils.healpix_ffts.spectral_periodic_extension_jax">spectral_periodic_extension_jax() (in module s2fft.utils.healpix_ffts)</a>
+</li>
+      <li><a href="api/utility/healpix_ffts.html#s2fft.utils.healpix_ffts.spectral_periodic_extension_torch">spectral_periodic_extension_torch() (in module s2fft.utils.healpix_ffts)</a>
+</li>
+      <li><a href="api/precompute_transforms/construct.html#s2fft.precompute_transforms.construct.spin_spherical_kernel">spin_spherical_kernel() (in module s2fft.precompute_transforms.construct)</a>
+</li>
+      <li><a href="api/precompute_transforms/construct.html#s2fft.precompute_transforms.construct.spin_spherical_kernel_jax">spin_spherical_kernel_jax() (in module s2fft.precompute_transforms.construct)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/sampling/spherical_samples.html#s2fft.sampling.s2_samples.t2theta">t2theta() (in module s2fft.sampling.s2_samples)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/sampling/spherical_samples.html#s2fft.sampling.s2_samples.thetas">thetas() (in module s2fft.sampling.s2_samples)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/utility/resampling.html#s2fft.utils.resampling.unextend">unextend() (in module s2fft.utils.resampling)</a>
+
+      <ul>
+        <li><a href="api/utility/resampling_jax.html#s2fft.utils.resampling_jax.unextend">(in module s2fft.utils.resampling_jax)</a>
+</li>
+        <li><a href="api/utility/resampling_torch.html#s2fft.utils.resampling_torch.unextend">(in module s2fft.utils.resampling_torch)</a>
+</li>
+      </ul></li>
+      <li><a href="api/utility/resampling.html#s2fft.utils.resampling.upsample_by_two_mwss">upsample_by_two_mwss() (in module s2fft.utils.resampling)</a>
+
+      <ul>
+        <li><a href="api/utility/resampling_jax.html#s2fft.utils.resampling_jax.upsample_by_two_mwss">(in module s2fft.utils.resampling_jax)</a>
+</li>
+        <li><a href="api/utility/resampling_torch.html#s2fft.utils.resampling_torch.upsample_by_two_mwss">(in module s2fft.utils.resampling_torch)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/utility/resampling.html#s2fft.utils.resampling.upsample_by_two_mwss_ext">upsample_by_two_mwss_ext() (in module s2fft.utils.resampling)</a>
+
+      <ul>
+        <li><a href="api/utility/resampling_jax.html#s2fft.utils.resampling_jax.upsample_by_two_mwss_ext">(in module s2fft.utils.resampling_jax)</a>
+</li>
+        <li><a href="api/utility/resampling_torch.html#s2fft.utils.resampling_torch.upsample_by_two_mwss_ext">(in module s2fft.utils.resampling_torch)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="W">W</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/utility/logs.html#s2fft.logs.warning_log">warning_log() (in module s2fft.logs)</a>
+</li>
+      <li><a href="api/precompute_transforms/construct.html#s2fft.precompute_transforms.construct.wigner_kernel">wigner_kernel() (in module s2fft.precompute_transforms.construct)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/precompute_transforms/construct.html#s2fft.precompute_transforms.construct.wigner_kernel_jax">wigner_kernel_jax() (in module s2fft.precompute_transforms.construct)</a>
+</li>
+      <li><a href="api/precompute_transforms/custom_ops.html#s2fft.precompute_transforms.custom_ops.wigner_subset_to_s2">wigner_subset_to_s2() (in module s2fft.precompute_transforms.custom_ops)</a>
+</li>
+      <li><a href="api/precompute_transforms/custom_ops.html#s2fft.precompute_transforms.custom_ops.wigner_subset_to_s2_jax">wigner_subset_to_s2_jax() (in module s2fft.precompute_transforms.custom_ops)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2023, Matthew Price and Jason McEwen.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
